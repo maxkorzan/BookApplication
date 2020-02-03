@@ -6,39 +6,31 @@ public class Book {
     private double price;
     private boolean isInStock;
 
-    //title
+    //setters and getters
     public void setTitle(String title){
         this.title = title;
     }
     public String getTitle(){
         return this.title;
     }
-
-    //author
     public void setAuthor(String author){
         this.author = author;
     }
     public String getAuthor(){
         return this.author;
     }
-
-    //description
     public void setDescription(String description){
         this.description = description;
     }
     public String getDescription(){
         return this.description;
     }
-
-    //price
     public double getPrice() {
         return price;
     }
     public void setPrice(double price) {
         this.price = price;
     }
-
-    //isInStock
     public boolean isInStock() {
         return isInStock;
     }
@@ -56,9 +48,9 @@ public class Book {
 
 
     //print author, title, and description
-    public String getDisplayText(){
-        String output = "";
-
-        return output;
+    public void getDisplayText(){
+        System.out.println("Author: " + getAuthor());
+        System.out.println("Title: " + getTitle());
+        System.out.println("Description: " + getDescription());
     }
 }
