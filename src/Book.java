@@ -58,8 +58,15 @@ public class Book {
 
     public double getBookPricing(int numBooks){
         double total = 0;
-        total = (numBooks)*(getPrice());
+
+        if(isInStock){
+            total = (numBooks)*(getPrice());
+        }
+        else {
+            System.out.println("No books in stock");
+        }
         return total;
+
     }
 
 

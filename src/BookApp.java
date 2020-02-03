@@ -1,6 +1,9 @@
+import java.text.NumberFormat;
 import java.util.Scanner;
 
 public class BookApp {
+    public static NumberFormat currency = NumberFormat.getCurrencyInstance();
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Book b = new Book();
@@ -9,7 +12,7 @@ public class BookApp {
         b.setTitle("Romeo and Juliet");
         b.setDescription("A tragic romance");
         b.setPrice(19.95);
-        b.setInStock(false);
+        b.setInStock(true);
 
         b.getDisplayText();
 
@@ -18,7 +21,7 @@ public class BookApp {
         int num = sc.nextInt();
 
         double totalCost = b.getBookPricing(num);
-        System.out.println("Total cost: " + totalCost);
+        System.out.println("Total cost: " + currency.format(totalCost));
 
     }
 }
