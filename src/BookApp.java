@@ -1,5 +1,8 @@
+import java.util.Scanner;
+
 public class BookApp {
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
         Book b = new Book();
 
         b.setAuthor("Shakespeare");
@@ -9,6 +12,13 @@ public class BookApp {
         b.setInStock(false);
 
         b.getDisplayText();
+
+        //////////////////////////
+        System.out.print("\nEnter a number of desired books: ");
+        int num = sc.nextInt();
+
+        double totalCost = b.getBookPricing(num);
+        System.out.println("Total cost: " + totalCost);
 
     }
 }

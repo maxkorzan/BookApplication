@@ -55,4 +55,12 @@ public class Book {
         System.out.println("Price: " + getPrice());
         System.out.println("In stock: " + isInStock());
     }
+
+    public double getBookPricing(int numBooks){
+        double total = 0;
+        total = (numBooks)*(getPrice());
+        return total;
+    }
+
+
 }
