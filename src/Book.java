@@ -52,5 +52,7 @@ public class Book {
         System.out.println("Author: " + getAuthor());
         System.out.println("Title: " + getTitle());
         System.out.println("Description: " + getDescription());
+        System.out.println("Price: " + getPrice());
+        System.out.println("In stock: " + isInStock());
     }
 }
